@@ -11,11 +11,11 @@ if not os.path.exists(FILE_NAME):
 
 
 def add_volunteer():
-    name = input("Enter Name: ")
-    age = input("Enter Age: ")
-    phone = input("Enter Phone: ")
-    email = input("Enter Email: ")
-    skill = input("Enter Skill: ")
+    name = input("Enter Name: ").strip()
+    age = input("Enter Age: ").strip()
+    phone = input("Enter Phone: ").strip()
+    email = input("Enter Email: ").strip()
+    skill = input("Enter Skill: ").strip()
 
     with open(FILE_NAME, "a", newline="") as file:
         writer = csv.writer(file)
@@ -27,23 +27,25 @@ def add_volunteer():
 def view_volunteers():
     print("\n===== Volunteer Records =====")
 
-    with open(FILE_NAME, "r") as file:
+    with open(FILE_NAME, "r", newline="") as file:
         reader = csv.reader(file)
 
         for row in reader:
-            print(row)
+            if row:
+                print(row)
 
 
 def search_volunteer():
-    keyword = input("\nEnter Volunteer Name: ").lower()
+    keyword = input("\nEnter Volunteer Name: ").strip().lower()
 
     found = False
 
-    with open(FILE_NAME, "r") as file:
+    with open(FILE_NAME, "r", newline="") as file:
         reader = csv.reader(file)
+        next(reader, None)  # Skip header row
 
         for row in reader:
-            if keyword in row[0].lower():
+            if row and keyword in row[0].lower():
                 print(row)
                 found = True
 
@@ -52,12 +54,13 @@ def search_volunteer():
 
 
 def filter_by_skill():
-    skill = input("\nEnter Skill: ").lower()
+    skill = input("\nEnter Skill: ").strip().lower()
 
     found = False
 
-    with open(FILE_NAME, "r") as file:
+    with open(FILE_NAME, "r", newline="") as file:
         reader = csv.reader(file)
+        next(reader, None)  # Skip header row
 
         for row in reader:
             if len(row) > 4 and skill in row[4].lower():
@@ -71,21 +74,20 @@ def filter_by_skill():
 def generate_report():
     count = 0
 
-    with open(FILE_NAME, "r") as file:
+    with open(FILE_NAME, "r", newline="") as file:
         reader = csv.reader(file)
-
-        next(reader)
+        next(reader, None)  # Skip header row
 
         for row in reader:
-            count += 1
+            if row:
+                count += 1
 
     print("\n===== REPORT =====")
     print("Total Volunteers:", count)
 
 
 while True:
-
-    print("\n====== NAYEPANKH FOUNDATION ======")
+    print("\n====== VOLUNTEER MANAGEMENT SYSTEM ======")
     print("1. Add Volunteer")
     print("2. View Volunteers")
     print("3. Search Volunteer")
@@ -93,7 +95,7 @@ while True:
     print("5. Generate Report")
     print("6. Exit")
 
-    choice = input("Enter Choice: ")
+    choice = input("Enter Choice: ").strip()
 
     if choice == "1":
         add_volunteer()

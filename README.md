@@ -136,7 +136,7 @@ Volunteer Registered Successfully!
 
 ## Output Screenshot
 
-![Volunteer Management System Output](Output.png)
+![Volunteer Management System Output](output.png)
 
 ## Applications
 

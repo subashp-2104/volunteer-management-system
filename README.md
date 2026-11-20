@@ -1,38 +1,36 @@
-# NayePankh Foundation Volunteer Management System
+# Volunteer Management System
 
 ## Overview
 
-The NayePankh Foundation Volunteer Management System is a Python-based application developed to help NGOs efficiently manage volunteer information.
+The **Volunteer Management System** is a Python-based application developed to manage volunteer information efficiently.
 
-This project allows users to register volunteers, search volunteer records, filter volunteers based on skills, and generate simple reports. All volunteer data is stored in a CSV file for easy access and management.
+This project provides a simple menu-driven interface that allows users to register new volunteers, view volunteer records, search for volunteers by name, filter volunteers based on their skills, and generate reports.
 
----
+All volunteer information is stored in a CSV file using Python's CSV file handling functionality, making data storage and retrieval simple and efficient.
 
 ## Features
 
-- Volunteer Registration
-- View Volunteer Records
-- Search Volunteers by Name
-- Filter Volunteers by Skill
-- Generate Volunteer Reports
-- CSV-Based Data Storage
-- Beginner-Friendly Python Project
-
----
+- **Volunteer Registration** – Register new volunteers by entering their personal and contact details.
+- **View Volunteers** – Display all registered volunteer records.
+- **Search Volunteer** – Search for volunteers using their names.
+- **Filter By Skill** – Find volunteers based on specific skills.
+- **Generate Report** – Display the total number of registered volunteers.
+- **CSV-Based Data Storage** – Store and retrieve volunteer information using CSV files.
+- **Menu-Driven Interface** – Simple and user-friendly command-line interaction.
 
 ## Technologies Used
 
 - Python
-- CSV File Handling
-- File Management
-- Menu-Driven Interface
-
----
+- CSV Module
+- File Handling
+- Functions
+- Loops and Conditional Statements
+- Command-Line Interface (CLI)
 
 ## Project Structure
 
 ```text
-nayepankh-volunteer-management/
+Volunteer Management System/
 │
 ├── main.py
 ├── volunteers.csv
@@ -41,20 +39,18 @@ nayepankh-volunteer-management/
 └── README.md
 ```
 
----
-
 ## How to Run
 
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/nayepankh-volunteer-management.git
+git clone https://github.com/yourusername/Volunteer-Management-System.git
 ```
 
 ### Step 2: Navigate to the Project Folder
 
 ```bash
-cd nayepankh-volunteer-management
+cd "Volunteer Management System"
 ```
 
 ### Step 3: Run the Application
@@ -63,13 +59,13 @@ cd nayepankh-volunteer-management
 python main.py
 ```
 
----
+**Note:** Python 3 must be installed on your system. No external packages are required because the project uses Python's built-in CSV module.
 
 ## Available Functions
 
-### Add Volunteer
+### 1. Add Volunteer
 
-Stores volunteer details such as:
+Allows users to register new volunteers by collecting the following details:
 
 - Name
 - Age
@@ -77,29 +73,48 @@ Stores volunteer details such as:
 - Email Address
 - Skill
 
-### Search Volunteer
+The entered information is stored in the CSV file.
 
-Search volunteers using their name.
+### 2. View Volunteers
 
-### Filter By Skill
+Displays all volunteer records stored in the CSV file.
 
-Find volunteers with specific skills such as:
+### 3. Search Volunteer
 
+Allows users to search for registered volunteers using their names.
+
+### 4. Filter By Skill
+
+Filters volunteer records based on specific skills.
+
+**Example Skills:**
 - Teaching
 - Fundraising
 - Event Management
 - Social Media
 
-### Generate Report
+Users can enter a skill to find volunteers with matching skills.
 
-Displays the total number of registered volunteers.
+### 5. Generate Report
 
----
+Generates a simple report by counting the total number of registered volunteers.
+
+**Sample Report:**
+
+```text
+===== REPORT =====
+
+Total Volunteers: 10
+```
+
+### 6. Exit
+
+Terminates the application safely.
 
 ## Sample Output
 
 ```text
-====== NAYEPANKH FOUNDATION ======
+====== VOLUNTEER MANAGEMENT SYSTEM ======
 
 1. Add Volunteer
 2. View Volunteers
@@ -119,23 +134,18 @@ Enter Skill: Teaching
 Volunteer Registered Successfully!
 ```
 
----
-
 ## Output Screenshot
 
-![Project Output](output.png)
-
----
+![Volunteer Management System Output](Output.png)
 
 ## Applications
 
 - NGO Volunteer Management
 - Community Service Programs
-- Event Coordination
 - Social Welfare Organizations
-- Educational NGOs
-
----
+- Event Coordination
+- Educational Institutions
+- Volunteer Registration Systems
 
 ## Future Enhancements
 
@@ -144,22 +154,19 @@ Volunteer Registered Successfully!
 - Volunteer Attendance Tracking
 - Email Notifications
 - PDF Report Generation
-- Admin Login System
-
----
+- Admin Login and Authentication
+- Advanced Volunteer Search and Filtering
 
 ## Author
 
-**SUBASH P**  
-B.E Computer Science and Engineering (AI & ML)
+**SUBASH P**
 
----
+B.E. Computer Science and Engineering (AI & ML)
 
 ## GitHub Topics
 
 ```text
 python
-ngo-management
 volunteer-management
 csv-storage
 file-handling
@@ -170,4 +177,4 @@ social-impact
 
 ---
 
-⭐ If you found this project useful, consider giving it a star on GitHub.
+⭐ If you find this project useful, consider giving it a star on GitHub!
